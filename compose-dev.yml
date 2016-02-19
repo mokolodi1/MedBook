@@ -13,33 +13,35 @@ telescope:
   volumes:
   - ./MedBook-Telescope3:/app-dev
   command: /app-dev/dockerDev.sh
-
-fusion:
-  build: MedBook-Fusion5
-  volumes:
-  - ./MedBook-Fusion5/webapp:/app-dev
-  container_name: fusion
-  command: /app-dev/dockerDev.sh
   environment:
-    ROOT_URL: ${ROOT_URL}/fusion
-
-crfs:
-  build: MedBook-CRFS
-  container_name: "crfs"
-  volumes:
-  - ./MedBook-CRFS/webapp:/app-dev
-  command: /app-dev/dockerDev.sh
-  environment:
-    ROOT_URL: ${ROOT_URL}/CRF
+    ROOT_URL: ${ROOT_URL} # don't know if this is necessary
+#
+# fusion:
+#   build: MedBook-Fusion5
+#   volumes:
+#   - ./MedBook-Fusion5/webapp:/app-dev
+#   container_name: fusion
+#   command: /app-dev/dockerDev.sh
+#   environment:
+#     ROOT_URL: ${ROOT_URL}/fusion
+#
+# crfs:
+#   build: MedBook-CRFS
+#   container_name: "crfs"
+#   volumes:
+#   - ./MedBook-CRFS/webapp:/app-dev
+#   command: /app-dev/dockerDev.sh
+#   environment:
+#     ROOT_URL: ${ROOT_URL}/CRF
 
 wrangler:
   build: MedBook-Wrangler
   container_name: "wrangler"
   volumes:
   - ./MedBook-Wrangler/webapp:/app-dev
-  command: /app-dev/dockerDev.sh
+  command: /app-dev/config/docker/run.sh
   environment:
-    ROOT_URL: ${ROOT_URL}/wrangler
+    ROOT_URL: ${ROOT_URL}/Wrangler
 
 job-runnner:
   build: MedBook-JobRunner
@@ -48,7 +50,7 @@ job-runnner:
   - ./MedBook-JobRunner/webapp:/app-dev
   command: /app-dev/dockerDev.sh
   environment:
-    ROOT_URL: ${ROOT_URL}/job-runner
+    ROOT_URL: ${ROOT_URL}/JobRuner
 
 # patient-care:
 #   build: MedBook-PatientCare
@@ -66,7 +68,7 @@ workbench:
     - ./MedBook-Workbench:/app-dev
   command: /app-dev/dockerDev.sh
   environment:
-    ROOT_URL: ${ROOT_URL}/workbench
+    ROOT_URL: ${ROOT_URL}/Workbench
 
 # cron:
 #   build: MedBook-Cron
@@ -82,7 +84,7 @@ mongo:
   container_name: "mongo"
   image: mongo:2.6.11
 
-  # uncomment when you want to talk directly to moongo
+  # # uncomment when you want to talk directly to moongo
   # from outside a container
   # ports:
   #   - "127.0.0.1:27017:27017"
