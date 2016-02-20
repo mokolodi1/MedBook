@@ -71,6 +71,17 @@ workbench:
     RELEASE: 1.2.1
     ROOT_URL: ${ROOT_URL}/Workbench
 
+collaboration-manager:
+  build: MedBook-CollaborationManager
+  container_name: "collaboration-manager"
+  volumes:
+    - ./MedBook-CollaborationManager:/app-dev
+  command: /app-dev/config/docker/run.sh
+  environment:
+    RELEASE: 1.2.1
+    ROOT_URL: ${ROOT_URL}/CollaborationManager
+
+
 # cron:
 #   build: MedBook-Cron
 #   container_name: "cron"
