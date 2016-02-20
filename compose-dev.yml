@@ -48,7 +48,7 @@ job-runnner:
   container_name: "job-runner"
   volumes:
   - ./MedBook-JobRunner/webapp:/app-dev
-  command: /app-dev/dockerDev.sh
+  command: /app-dev/config/docker/run.sh
   environment:
     ROOT_URL: ${ROOT_URL}/JobRuner
 
@@ -66,7 +66,7 @@ workbench:
   container_name: "workbench"
   volumes:
     - ./MedBook-Workbench:/app-dev
-  command: /app-dev/dockerDev.sh
+  command: /app-dev/config/docker/run.sh
   environment:
     ROOT_URL: ${ROOT_URL}/Workbench
 

@@ -1,24 +1,24 @@
 [submodule "MedBook-Gateway"]
 	path = MedBook-Gateway
 	url = https://github.com/mokolodi1/MedBook-Gateway
-# [submodule "MedBook-Fusion5"]
-# 	path = MedBook-Fusion5
-# 	url = https://github.com/UCSC-MedBook/MedBook-Fusion5.git
+[submodule "MedBook-Fusion5"]
+	path = MedBook-Fusion5
+	url = https://github.com/UCSC-MedBook/MedBook-Fusion5
 [submodule "MedBook-Telescope3"]
 	path = MedBook-Telescope3
-	url = https://github.com/UCSC-MedBook/MedBook-Telescope3.git
-# [submodule "MedBook-CRFS"]
-# 	path = MedBook-CRFS
-# 	url = https://github.com/UCSC-MedBook/MedBook-CRFS.git
+	url = https://github.com/UCSC-MedBook/MedBook-Telescope3
+[submodule "MedBook-CRFS"]
+	path = MedBook-CRFS
+	url = https://github.com/UCSC-MedBook/MedBook-CRFS
 [submodule "MedBook-Wrangler"]
 	path = MedBook-Wrangler
 	url = https://github.com/mokolodi1/MedBook-Wrangler
 [submodule "MedBook-JobRunner"]
 	path = MedBook-JobRunner
-	url = https://github.com/mokolodi1/MedBook-JobRunner.git
+	url = https://github.com/mokolodi1/MedBook-JobRunner
 [submodule "MedBook-Workbench"]
 	path = MedBook-Workbench
-	url = https://github.com/mokolodi1/MedBook-Workbench.git
+	url = https://github.com/mokolodi1/MedBook-Workbench
 [submodule "MedBook-PatientCare"]
 	path = MedBook-PatientCare
 	url = https://github.com/UCSC-MedBook/MedBook-PatientCare
