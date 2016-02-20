@@ -38,7 +38,7 @@ wrangler:
   build: MedBook-Wrangler
   container_name: "wrangler"
   volumes:
-  - ./MedBook-Wrangler/webapp:/app-dev
+  - ./MedBook-Wrangler:/app-dev
   command: /app-dev/config/docker/run.sh
   environment:
     ROOT_URL: ${ROOT_URL}/Wrangler
@@ -47,7 +47,7 @@ job-runnner:
   build: MedBook-JobRunner
   container_name: "job-runner"
   volumes:
-  - ./MedBook-JobRunner/webapp:/app-dev
+  - ./MedBook-JobRunner:/app-dev
   command: /app-dev/config/docker/run.sh
   environment:
     ROOT_URL: ${ROOT_URL}/JobRuner
@@ -68,6 +68,7 @@ workbench:
     - ./MedBook-Workbench:/app-dev
   command: /app-dev/config/docker/run.sh
   environment:
+    RELEASE: 1.2.1
     ROOT_URL: ${ROOT_URL}/Workbench
 
 # cron:

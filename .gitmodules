@@ -22,3 +22,6 @@
 [submodule "MedBook-PatientCare"]
 	path = MedBook-PatientCare
 	url = https://github.com/UCSC-MedBook/MedBook-PatientCare
+[submodule "MedBook-CollaborationManager"]
+	path = MedBook-CollaborationManager
+	url = https://github.com/mokolodi1/MedBook-CollaborationManager
